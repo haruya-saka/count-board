@@ -1,0 +1,188 @@
+.login-title{
+    color: rgb(158, 74, 179);
+}
+
+.login-input{
+    border: solid 1px #b2b2b2;
+}
+
+.check-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+}
+
+.submit-btn {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(158, 74, 179);
+}
+
+.submit-btn:hover {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(158, 74, 179);
+    background-color: #fff;
+    border: solid 1px #848484;
+}
+
+.forgot-pass {
+    font-size: 13px;
+    font-weight: 400;
+    /* color: rgb(218, 71, 255); */
+}
+
+.register-btn {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(158, 74, 179);
+    background-color: #fff;
+    border: solid 1px #848484;
+}
+
+.register-btn:hover {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(158, 74, 179);
+}
+
+.login-btn {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(158, 74, 179);
+}
+
+.login-btn:hover {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(158, 74, 179);
+    background-color: #fff;
+    border: solid 1px #848484;
+}
+
+.pass-resetting {
+    color: rgb(158, 74, 179);
+}
+
+.addmemo-btn {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(158, 74, 179);
+}
+
+
+.icon {
+    transition: 0.2s;
+}
+
+.icon:hover {
+    transform:scale(1.2,1.2);
+}
+
+
+.card .memo-action,.tag-memo {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .tag-memo {
+    opacity: 1;
+}
+
+.card:hover .memo-action {
+    opacity: 1;
+}
+
+.tag-btn {
+    transition: 0.2s;
+}
+
+.tag-btn:hover {
+    transform:scale(1.2,1.2);
+}
+
+
+.tag-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+.tag-btn span {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.tag-btn.active span {
+    opacity: 1;
+}
+
+.tags-container{
+    text-decoration: none;
+}
+
+.left-time {
+    background-color: chocolate;
+    color: rgb(244, 244, 244);
+    height: 2rem;
+}
+
+.left-time-text{
+    width: 18rem;
+    text-align: center;
+    background-color: chocolate;
+    color: #fff;
+}
+/* .left-time-text::after,
+.left-time-text::before{
+    content: '';
+    position: relative;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30 10px 15px 0px;
+    content: '';
+} */
+
+
+/* .left-time {
+    position: relative;
+    display: inline-block;
+
+    padding: 0 40px 0 20px;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    background-color: chocolate;
+    color: rgb(244, 244, 244);
+    font-weight: bold;
+    text-align: center;
+}
+
+.left-time::before,
+.left-time::after {
+    position: absolute;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30px 20px 30px 0px;
+    content: '';
+}
+
+.left-time::before {
+    left: -20px;
+    border-color: transparent #C1DDE1;
+}
+
+.left-time::after {
+    right: 0;
+    border-color: transparent #fff;
+} */
