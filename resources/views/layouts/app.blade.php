@@ -27,18 +27,16 @@
 </head>
 <body style="padding: 60px 0">
     <div id="app">
-        <div>
+        <div class="header">
             @yield('header')
         </div>
-        <div class="d-flex">
-            <div>
-                @yield('sidebar')
-            </div>
-            <main class="w-full">
-                @yield('content')
-            </main>
+        <div class="sidbar">
+            @yield('sidebar')
         </div>
-        <div>
+        <main class="w-full">
+            @yield('content')
+        </main>
+        <div class="footer">
             @yield('footer')
         </div>
     </div>
