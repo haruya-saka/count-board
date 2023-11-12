@@ -36,13 +36,14 @@
                 </button>
             </li>
         </ul>
-        {{-- タグ追加モーダル --}}
-        @include('modal.add_tag')
+
+        {{-- タグ編集モーダル --}}
+        @include('modal.edit_tag')
         <ul>
             <li>
-                <button type="button" class="mt-2 tag-btn" data-bs-toggle="modal" data-bs-target="#addTagModal">
-                    <i class="fa-solid fa-circle-plus px-2 tag-icon"></i>
-                    <span>タグを追加</span>
+                <button type="button" class="mt-2 tag-btn" data-bs-toggle="modal" data-bs-target="#editTagModal">
+                    <i class="fa-solid fa-bars px-2 tag-icon"></i>
+                    <span>タグを編集</span>
                 </button>
             </li>
         </ul>
@@ -61,5 +62,7 @@ $(document).ready(function() {
         $('.tag-btn').removeClass('active');
     });
 });
+
+
 </script>
 

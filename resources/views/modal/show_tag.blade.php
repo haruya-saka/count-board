@@ -19,7 +19,7 @@
                         </div>                                                   
                     </label> 
                     @endforeach
-                    <button type="submit">Submit</button>
+                    <button type="submit">add</button>
                 </form>
             </div>
         </div>
