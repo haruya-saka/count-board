@@ -25,3 +25,4 @@ google keepを手本に、メモの見やすさを追求しました。
 laravel  
 jQuery  
 bootstrap
+Mamp
