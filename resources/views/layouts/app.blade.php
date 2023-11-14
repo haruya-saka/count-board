@@ -16,12 +16,10 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{{ asset('/js/script.js') }}"></script>
     <script src="{{ asset('/js/app.js') }}"></script>
 
     <!-- Styles -->
     <link  rel="stylesheet" href="{{ asset('css/count.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/style.css')  }}" >
     <script src="https://kit.fontawesome.com/0ae735fbca.js" crossorigin="anonymous"></script>
 
 </head>

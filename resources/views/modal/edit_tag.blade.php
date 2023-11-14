@@ -5,7 +5,8 @@
             <h1 class="modal-title fs-5" id="addTagModalLabel"></h1>
             </div>
             <div class="modal-body">
-                <form action="{{  route('tags.store') }}" method="post">
+                <form action="{{ route('tags.store') }}" method="post" autocomplete="off">
+
                     @csrf
                     <div class="mb-3">
                         <input type="text" class="form-control" id="addcTagInput" placeholder="タグを追加" name="name">

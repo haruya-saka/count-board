@@ -1,3 +1,19 @@
+.menu-icon::after {
+    display: none;
+  }
+ 
+a,a:hover,a:visited{
+    color: inherit;
+}
+
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
 .login-title{
     color: rgb(158, 74, 179);
 }
@@ -140,49 +156,10 @@
     background-color: chocolate;
     color: #fff;
 }
-/* .left-time-text::after,
-.left-time-text::before{
-    content: '';
-    position: relative;
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 30 10px 15px 0px;
-    content: '';
-} */
 
 
-/* .left-time {
-    position: relative;
-    display: inline-block;
-
-    padding: 0 40px 0 20px;
-    border-top: 3px solid;
-    border-bottom: 3px solid;
+.header {
     background-color: chocolate;
-    color: rgb(244, 244, 244);
-    font-weight: bold;
-    text-align: center;
+    color: #fff;
 }
 
-.left-time::before,
-.left-time::after {
-    position: absolute;
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 30px 20px 30px 0px;
-    content: '';
-}
-
-.left-time::before {
-    left: -20px;
-    border-color: transparent #C1DDE1;
-}
-
-.left-time::after {
-    right: 0;
-    border-color: transparent #fff;
-} */
