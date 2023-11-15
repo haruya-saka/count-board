@@ -24,5 +24,5 @@ google keepを手本に、メモの見やすさを追求しました。
 ### ⚫️使用スタック  
 　laravel  
 　jQuery  
-　bootstrap
+　bootstrap  
 　Mamp
