@@ -22,7 +22,7 @@ google keepを手本に、メモの見やすさを追求しました。
 ・キャッシュを用いた処理の高速化
 
 ### ⚫️使用スタック  
-laravel  
-jQuery  
-bootstrap
-Mamp
+　laravel  
+　jQuery  
+　bootstrap
+　Mamp
