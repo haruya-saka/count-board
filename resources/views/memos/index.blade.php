@@ -10,6 +10,7 @@
     <div class="col">
         @section('content')
         <div class="container">
+            {{-- フォームバリデーションのエラーハンドリング --}}
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -19,8 +20,6 @@
                     </ul>
                 </div>
             @endif
-
-
             {{-- タグ編集モーダル --}}
             @include('modal.edit_tag')
 
@@ -35,12 +34,14 @@
                     {{-- タグ一覧モーダル --}}
                     @include('modal.show_tag')
 
+                    {{-- メモをカードデザインで表示 --}}
                     <div class="col p-5">
                         <div class="card bg-white mt-3 position-relative" style="width: 20rem;">
                             <div class="card-body">
                                 <div class="text-center">
                                     <div class="title d-flex align-items-center justify-content-center">
                                         <h4 class="card-title text-center fw-bold">
+                                            {{-- メモのタイトル --}}
                                             {{ $memo->title }}
                                         </h4>
                                     </div>
@@ -51,13 +52,14 @@
                                         <div class="m-1 d-flex align-items-center justify-content-center flex-row border border-secondary rounded-1 bg-secondary text-light" style="width: 1.2rem; height: 1.2rem;">{{ mb_substr($tag->name , 0 , 1) }}</div>
                                     @endforeach
                                 </div>
+                                {{-- メモの内容 --}}
                                 <p class="card-text text-center gap-2">{{ $memo->content }}</p>
                             </div>
                             
                             <div class=" text-body-secondary" style="width: 20rem">
-                                {{-- <div class="text-center left-time"> --}}
-                                    <p class="left-time-text"id="countdown{{ $memo->id }}"></p>
-                                {{-- </div> --}}
+                                {{-- 残り日数 --}}
+                                <p class="left-time-text"id="countdown{{ $memo->id }}"></p>
+                                {{-- メモの編集、削除、タグ付けアクション --}}
                                 <div class="d-inline-block memo-action" style="width: 20rem">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#editMemoModal{{ $memo->id }}"><i class="fa-solid fa-pen icon px-2"></i></a>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#deleteMemoModal{{ $memo->id }}"><i class="fa-solid fa-trash-can icon px-2"></i></a>

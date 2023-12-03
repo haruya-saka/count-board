@@ -1,3 +1,4 @@
+{{-- メモの編集モーダル --}}
 <div class="modal fade" id="editMemoModal{{ $memo->id }}" tabindex="-1" aria-labelledby="editMemoModalLabel{{ $memo->id }}">
     <div class="modal-dialog">
         <div class="modal-content">

@@ -1,3 +1,4 @@
+{{-- タグの一覧と付加モーダル --}}
 <div class="modal fade" id="showTagModal{{ $memo->id }}" tabindex="-1" aria-labelledby="showTagModalLabel{{ $memo->id }}" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

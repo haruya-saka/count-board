@@ -1,3 +1,4 @@
+{{-- メモの削除モーダル --}}
 <div class="modal fade" id="deleteMemoModal{{ $memo->id }}" tabindex="-1" aria-labelledby="deleteMemoModalLabel{{ $memo->id }}">
     <div class="modal-dialog">
         <div class="modal-content">

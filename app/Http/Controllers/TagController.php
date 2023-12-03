@@ -29,15 +29,6 @@ class TagController extends Controller
         return redirect()->route('memos.index');
     }
 
-    public function tagFilter(Tag $tag)
-    {
-        // タグに関連するメモを取得
-        $memos = $tag->memos;
-    
-        // メモ一覧を部分ビューとして返す
-        return view('tag.memos', compact('memos'));
-    }
-
     /**
      * Update the specified resource in storage.
      *

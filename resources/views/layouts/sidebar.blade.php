@@ -3,6 +3,7 @@
     <div class="tags-container">
         <ul>
             <li>
+                {{-- メインページの表示 --}}
                 <button type="button" class="tag-btn">
                     <i class="fa-solid fa-tags px-2 tag-icon"></i>
                     <a href="{{ route('index') }}" class="text-decoration-none">
@@ -12,11 +13,13 @@
             </li>
         </ul>
 
+        {{-- タグの一覧と、タグによるメモのフィルター表示を行うボタン --}}
         @foreach ($tags as $tag)
             <ul>
                 <li>
                     <button type="button" class="tag-btn">
                         <i class="fa-solid fa-tags px-2 tag-icon"></i>
+                        {{-- ボタンのクリック時に、クリックされたタグのidをtagFilterに送信 --}}
                         <a href="{{ route('memo.tagFilter', ['tag' => $tag->id]) }}" class="text-decoration-none" data-tag-id="{{ $tag->id }}">
                             <span>{{ $tag->name }}</span>
                         </a>
@@ -53,6 +56,7 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+    // ホバーでサイドバーメニューの表示切り替えを行うためのjavascript
     document.addEventListener('DOMContentLoaded', function() {
     $(document).ready(function() {
         $('.sidebar').hover(function() {

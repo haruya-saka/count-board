@@ -1,3 +1,5 @@
+{{-- メモ作成モーダル --}}
+
 <div class="modal fade" id="addMemoModal" tabindex="-1" aria-labelledby="addMemoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -28,6 +30,7 @@
 </div>
 
 <script>
+    // フォーム入力の際にフォーカス
     const addMemoModal = document.getElementById('addMemoModal')
     const addMemoInput = document.getElementById('addMemoInput')
 

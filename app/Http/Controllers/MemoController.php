@@ -54,13 +54,14 @@ class MemoController extends Controller
 
     public function tagFilter($tagId)
     {
+        // サイドバーから送信されたidのタグを取得
         $tag = Tag::find($tagId);
     
         if (!$tag) {
             // タグが見つからない場合のエラーハンドリング
             abort(404);
         }
-    
+        
         $memos = $tag->memos;
         $tags = Auth::user()->tags;
     

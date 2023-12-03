@@ -1,10 +1,9 @@
+{{-- タグ編集モーダル --}}
 <div class="modal fade" id="editTagModal" tabindex="-1" aria-labelledby="editTagModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title fs-5" id="addTagModalLabel"></h1>
-            </div>
             <div class="modal-body">
+                {{-- タグの追加 --}}
                 <form action="{{ route('tags.store') }}" method="post" autocomplete="off">
 
                     @csrf
@@ -16,7 +15,7 @@
                         <button type="submit" class="btn btn-primary">Add</button>
                     </div>
                 </form>
-
+                {{-- タグの一覧 --}}
                 @foreach ($tags as $tag)
                 <ul>
                     <li class="d-flex align-items-center">
