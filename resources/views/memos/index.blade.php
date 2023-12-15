@@ -3,6 +3,8 @@
 
 @include('layouts.header')
 
+<script src="{{ asset('js/countdown.js') }}"></script>
+
 <div class="row">
     <div class="col-2 bg-light" id="sidemenu" class="sidebar">
         @include('layouts.sidebar')
@@ -68,50 +70,15 @@
                             </div>
                         </div>
                     </div>
-
                     <script>
-                        // memoidを関数名に含むことで各メモにカウントダウン関数を適用
-                        var updateCountdown{{ $memo->id }} = () => {
-                            var createdAt = @json($memo->created_at);
-                            var updatedAt = @json($memo->updated_at);
-                            var createdAtDate = new Date(createdAt);
-                            var updatedAtDate = new Date(updatedAt);
-                            var currentDate = new Date();
-                             
-                            //メモ更新時は更新された日時よりカウントダウン(if = ture)それ以外は作成日よりカウントダウン
-                            if (updatedAtDate > createdAtDate) { 
-                                let period = @json($memo->period);
-                                let passedDays = Math.floor((currentDate - updatedAtDate) / (1000 * 60 * 60 * 24));
-                                period = period - passedDays;
-
-                                if (period <= 0) {
-                                document.getElementById('countdown{{ $memo->id }}').textContent = '期限切れ';
-                                } else {
-                                    document.getElementById('countdown{{ $memo->id }}').textContent = '残り' + period + '日';
-                                }
-                            } else {
-                                let period = @json($memo->period);
-                                let passedDays = Math.floor((currentDate - createdAtDate) / (1000 * 60 * 60 * 24));
-                                period = period - passedDays;
-
-                                if (period <= 0) {
-                                document.getElementById('countdown{{ $memo->id }}').textContent = '期限切れ';
-                                } else {
-                                    document.getElementById('countdown{{ $memo->id }}').textContent = '残り' + period + '日';
-                                }
-                            }
-
-                        }
-
-                        updateCountdown{{ $memo->id }}();
+                        updateCountdown({{ $memo->id }}, @json($memo->created_at), @json($memo->updated_at), @json($memo->period));
                     </script>
                 @endforeach
+
             </div>
         </div>
     </div>
 </div>
-
-
 
 
 @include('layouts.footer')
