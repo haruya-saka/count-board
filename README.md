@@ -17,12 +17,15 @@ https://github.com/haruya-saka/count-board/assets/127200853/e6037a20-540f-4d04-a
 google keepを手本に、メモの見やすさを追求しました。
 
 ### ⚫️今後  
-・期限が近づいてきたメモのリマインド  
+・javascriptをbladeに埋め込みではなく、外部ファイルから持ってきたい->php変数を引数に渡す形でカウントダウン関数を用いる
+・期限が近づいてきたメモのリマインド
 ・ベースカラーやメモの表示形式など、ユーザーによるカスタマイズ機能  
 ・キャッシュを用いた処理の高速化
+ここらへんを実装後、リリース予定
 
 ### ⚫️使用スタック  
 　laravel  
 　jQuery  
 　bootstrap  
 　Mamp
+phpmyadimin
