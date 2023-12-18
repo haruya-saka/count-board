@@ -6,7 +6,7 @@
                 {{-- メインページの表示 --}}
                 <button type="button" class="tag-btn">
                     <i class="fa-solid fa-tags px-2 tag-icon"></i>
-                    <a href="{{ route('index') }}" class="text-decoration-none">
+                    <a href="{{ route('memos.index') }}" class="text-decoration-none">
                         <span class="">home</span>
                     </a>
                 </button>

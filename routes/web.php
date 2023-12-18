@@ -17,15 +17,14 @@ use App\Http\Controllers\TagController;
 
 Route::get('/', [MemoController::class, 'index'])->name('index')->middleware('auth');
 
-
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('memos', MemoController::class)->only(['index', 'store', 'update', 'destroy',])->middleware('auth');
 
+// タグをメモにアタッチ
 Route::post('/memos/{memo}/attach-tags', [App\Http\Controllers\MemoController::class, 'attachTags'])->name('memos.attachTags');
 
 Route::resource('tags', TagController::class)->only(['store', 'update', 'destroy'])->middleware('auth');
 
+// タグでフィルター表示
 Route::get('tag/{tag}', [App\Http\Controllers\MemoController::class, 'tagFilter'])->name('memo.tagFilter');

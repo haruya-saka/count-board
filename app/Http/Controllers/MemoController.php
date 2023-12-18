@@ -47,6 +47,7 @@ class MemoController extends Controller
 
     public function attachTags(Request $request, Memo $memo)
     {
+        // メモにタグをアタッチ
         $memo->tags()->sync($request->input('tag_ids'));
     
         return redirect()->route('memos.index');
@@ -54,6 +55,7 @@ class MemoController extends Controller
 
     public function tagFilter($tagId)
     {
+        // 表示するメモをタグでフィルター
         // サイドバーから送信されたidのタグを取得
         $tag = Tag::find($tagId);
     
@@ -79,16 +81,6 @@ class MemoController extends Controller
         return view('memos.show', compact('memo'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Memo  $memo
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Memo $memo)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
